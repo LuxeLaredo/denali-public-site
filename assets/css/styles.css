@@ -3378,3 +3378,59 @@ background-position: center 42%;
   font-size: clamp(1.3rem, 2.15vw, 1.72rem);
   line-height: 1.45 !important;
 }
+
+/* Footer contact finish: direct line, readable email, responsive columns. */
+.site-footer .footer-column a.footer-contact-email {
+  font-size: 0.92rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.site-footer .footer-contact-phone {
+  white-space: nowrap;
+}
+
+@media (min-width: 1181px) {
+  .site-footer .footer-grid {
+    grid-template-columns:
+      minmax(210px, 1.25fr)
+      minmax(100px, 0.6fr)
+      minmax(150px, 0.85fr)
+      minmax(130px, 0.75fr)
+      minmax(300px, 1.55fr);
+    gap: clamp(1rem, 1.7vw, 2rem);
+  }
+}
+
+@media (min-width: 721px) and (max-width: 1180px) {
+  .site-footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .site-footer .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Keep the mountain inside the viewport when outer margins are narrow. */
+@media (min-width: 721px) and (max-width: 1376px) {
+  .site-footer .footer-brand {
+    position: static;
+    display: flex;
+    gap: 1rem;
+    padding-left: 0;
+  }
+  .site-footer .footer-brand .brand-logo {
+    position: static;
+    transform: none;
+    width: 58px;
+    margin: 0;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-footer .footer-contact-column {
+    grid-column: 1 / -1;
+  }
+}
