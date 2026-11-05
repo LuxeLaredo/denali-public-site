@@ -449,6 +449,11 @@ a.button,
   color: var(--denali-white);
 }
 
+.footer-column a.footer-contact-email {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 .footer-contact-column {
   display: flex;
   flex-direction: column;
